@@ -1,83 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Rotating Cube</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Rotating Cube</title>
+  <link rel="stylesheet" href="styles.css">
+  </head>
 <body>
 
 <div class="scene">
-    <div class="cube">
-        <!-- Front face -->
-        <div class="face face_front face_common"></div>
-        <div class="face face_front face_common additional_class"></div>
-        <div class="face face_front face_common" style="transform: translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_front face_common" style="transform: translateZ(var(--face-depth)) translateX(var(--face-size));"></div>
-        <div class="face face_front face_common" style="transform: translateZ(var(--face-depth)) translateY(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_front face_common" style="transform: translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_front face_common" style="transform: translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_front face_common" style="transform: translateZ(var(--face-depth)) translateY(var(--face-size));"></div>
-        <div class="face face_front face_common" style="transform: translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(var(--face-size));"></div>
-        <div class="face face_front face_common" style="transform: translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(var(--face-size));"></div>
+  <div class="cube">
+    <!-- Front face -->
+    <div class="face face_front" onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_front" style="transform: translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size)));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_front" style="transform: translateZ(var(--face-depth)) translateX(var(--face-size));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_front" style="transform: translateZ(var(--face-depth)) translateY(calc(-1 * var(--face-size)));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_front" style="transform: translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(calc(-1 * var(--face-size)));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_front" style="transform: translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(calc(-1 * var(--face-size)));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_front" style="transform: translateZ(var(--face-depth)) translateY(var(--face-size));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_front" style="transform: translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(var(--face-size));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_front" style="transform: translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(var(--face-size));"
+         onclick="this.classList.toggle('clicked')"></div>
 
-        <!-- Back face -->
-        <div class="face face_back face_common"></div>
-        <div class="face face_back face_common" style="transform: rotateY(var(--rotation-180)) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_back face_common" style="transform: rotateY(var(--rotation-180)) translateZ(var(--face-depth)) translateX(var(--face-size));"></div>
-        <div class="face face_back face_common" style="transform: rotateY(var(--rotation-180)) translateZ(var(--face-depth)) translateY(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_back face_common" style="transform: rotateY(var(--rotation-180)) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_back face_common" style="transform: rotateY(var(--rotation-180)) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_back face_common" style="transform: rotateY(var(--rotation-180)) translateZ(var(--face-depth)) translateY(var(--face-size));"></div>
-        <div class="face face_back face_common" style="transform: rotateY(var(--rotation-180)) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(var(--face-size));"></div>
-        <div class="face face_back face_common" style="transform: rotateY(var(--rotation-180)) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(var(--face-size));"></div>
+    <!-- Back face -->
+    <div class="face face_back" onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_back" style="transform: rotateY(var(--rotation-180)) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size)));"
+       onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_back" style="transform: rotateY(var(--rotation-180)) translateZ(var(--face-depth)) translateX(var(--face-size));"
+       onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_back" style="transform: rotateY(var(--rotation-180)) translateZ(var(--face-depth)) translateY(calc(-1 * var(--face-size)));"
+       onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_back" style="transform: rotateY(var(--rotation-180)) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(calc(-1 * var(--face-size)));"
+       onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_back" style="transform: rotateY(var(--rotation-180)) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(calc(-1 * var(--face-size)));"
+       onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_back" style="transform: rotateY(var(--rotation-180)) translateZ(var(--face-depth)) translateY(var(--face-size));"
+       onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_back" style="transform: rotateY(var(--rotation-180)) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(var(--face-size));"
+       onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_back" style="transform: rotateY(var(--rotation-180)) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(var(--face-size));"
+       onclick="this.classList.toggle('clicked')"></div>
 
-        <!-- Right face -->
-        <div class="face face_right face_common"></div>
-        <div class="face face_right face_common" style="transform: rotateY(var(--rotation-90)) translateZ(var(--face-depth)) translateY(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_right face_common" style="transform: rotateY(var(--rotation-90)) translateZ(var(--face-depth)) translateY(var(--face-size));"></div>
-        <div class="face face_right face_common" style="transform: rotateY(var(--rotation-90)) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_right face_common" style="transform: rotateY(var(--rotation-90)) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_right face_common" style="transform: rotateY(var(--rotation-90)) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(var(--face-size));"></div>
-        <div class="face face_right face_common" style="transform: rotateY(var(--rotation-90)) translateZ(var(--face-depth)) translateX(var(--face-size));"></div>
-        <div class="face face_right face_common" style="transform: rotateY(var(--rotation-90)) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_right face_common" style="transform: rotateY(var(--rotation-90)) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(var(--face-size));"></div>
+    <!-- Right face -->
+    <div class="face face_right" onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_right" style="transform: rotateY(var(--rotation-90)) translateZ(var(--face-depth)) translateY(calc(-1 * var(--face-size)));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_right" style="transform: rotateY(var(--rotation-90)) translateZ(var(--face-depth)) translateY(var(--face-size));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_right" style="transform: rotateY(var(--rotation-90)) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size)));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_right" style="transform: rotateY(var(--rotation-90)) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(calc(-1 * var(--face-size)));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_right" style="transform: rotateY(var(--rotation-90)) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(var(--face-size));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_right" style="transform: rotateY(var(--rotation-90)) translateZ(var(--face-depth)) translateX(var(--face-size));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_right" style="transform: rotateY(var(--rotation-90)) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(calc(-1 * var(--face-size)));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_right" style="transform: rotateY(var(--rotation-90)) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(var(--face-size));"
+         onclick="this.classList.toggle('clicked')"></div>
 
-        <!-- Left face -->
-        <div class="face face_left face_common"></div>
-        <div class="face face_left face_common" style="transform: rotateY(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateY(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_left face_common" style="transform: rotateY(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateY(var(--face-size));"></div>
-        <div class="face face_left face_common" style="transform: rotateY(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_left face_common" style="transform: rotateY(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_left face_common" style="transform: rotateY(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(var(--face-size));"></div>
-        <div class="face face_left face_common" style="transform: rotateY(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(var(--face-size));"></div>
-        <div class="face face_left face_common" style="transform: rotateY(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_left face_common" style="transform: rotateY(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(var(--face-size));"></div>
 
-        <!-- Top face -->
-        <div class="face face_top face_common"></div>
-        <div class="face face_top face_common" style="transform: rotateX(var(--rotation-90)) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_top face_common" style="transform: rotateX(var(--rotation-90)) translateZ(var(--face-depth)) translateX(var(--face-size));"></div>
-        <div class="face face_top face_common" style="transform: rotateX(var(--rotation-90)) translateZ(var(--face-depth)) translateY(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_top face_common" style="transform: rotateX(var(--rotation-90)) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_top face_common" style="transform: rotateX(var(--rotation-90)) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_top face_common" style="transform: rotateX(var(--rotation-90)) translateZ(var(--face-depth)) translateY(var(--face-size));"></div>
-        <div class="face face_top face_common" style="transform: rotateX(var(--rotation-90)) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(var(--face-size));"></div>
-        <div class="face face_top face_common" style="transform: rotateX(var(--rotation-90)) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(var(--face-size));"></div>
 
-        <!-- Bottom face -->
-        <div class="face face_bottom face_common"></div>
-        <div class="face face_bottom face_common" style="transform: rotateX(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_bottom face_common" style="transform: rotateX(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(var(--face-size));"></div>
-        <div class="face face_bottom face_common" style="transform: rotateX(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateY(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_bottom face_common" style="transform: rotateX(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_bottom face_common" style="transform: rotateX(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(calc(-1 * var(--face-size)));"></div>
-        <div class="face face_bottom face_common" style="transform: rotateX(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateY(var(--face-size));"></div>
-        <div class="face face_bottom face_common" style="transform: rotateX(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(var(--face-size));"></div>
-        <div class="face face_bottom face_common" style="transform: rotateX(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(var(--face-size));"></div>
+    <!-- Left face -->
+    <div class="face face_left" onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_left" style="transform: rotateY(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateY(calc(-1 * var(--face-size)));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_left" style="transform: rotateY(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateY(var(--face-size));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_left" style="transform: rotateY(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size)));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_left" style="transform: rotateY(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(calc(-1 * var(--face-size)));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_left" style="transform: rotateY(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(var(--face-size));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_left" style="transform: rotateY(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(var(--face-size));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_left" style="transform: rotateY(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(calc(-1 * var(--face-size)));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_left" style="transform: rotateY(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(var(--face-size));"
+         onclick="this.classList.toggle('clicked')"></div>
+
+    <!-- Top face -->
+      <div class="face face_top" onclick="this.classList.toggle('clicked')"></div>
+      <div class="face face_top" style="transform: rotateX(var(--rotation-90)) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size)));"
+           onclick="this.classList.toggle('clicked')"></div>
+      <div class="face face_top" style="transform: rotateX(var(--rotation-90)) translateZ(var(--face-depth)) translateX(var(--face-size));"
+           onclick="this.classList.toggle('clicked')"></div>
+      <div class="face face_top" style="transform: rotateX(var(--rotation-90)) translateZ(var(--face-depth)) translateY(calc(-1 * var(--face-size)));"
+           onclick="this.classList.toggle('clicked')"></div>
+      <div class="face face_top" style="transform: rotateX(var(--rotation-90)) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(calc(-1 * var(--face-size)));"
+           onclick="this.classList.toggle('clicked')"></div>
+      <div class="face face_top" style="transform: rotateX(var(--rotation-90)) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(calc(-1 * var(--face-size)));"
+           onclick="this.classList.toggle('clicked')"></div>
+      <div class="face face_top" style="transform: rotateX(var(--rotation-90)) translateZ(var(--face-depth)) translateY(var(--face-size));"
+           onclick="this.classList.toggle('clicked')"></div>
+      <div class="face face_top" style="transform: rotateX(var(--rotation-90)) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(var(--face-size));"
+           onclick="this.classList.toggle('clicked')"></div>
+      <div class="face face_top" style="transform: rotateX(var(--rotation-90)) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(var(--face-size));"
+           onclick="this.classList.toggle('clicked')"></div>
+
+    <!-- Bottom face -->
+    <div class="face face_bottom" onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_bottom" style="transform: rotateX(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size)));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_bottom" style="transform: rotateX(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(var(--face-size));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_bottom" style="transform: rotateX(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateY(calc(-1 * var(--face-size)));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_bottom" style="transform: rotateX(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(calc(-1 * var(--face-size)));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_bottom" style="transform: rotateX(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(calc(-1 * var(--face-size)));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_bottom" style="transform: rotateX(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateY(var(--face-size));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_bottom" style="transform: rotateX(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(calc(-1 * var(--face-size))) translateY(var(--face-size));"
+         onclick="this.classList.toggle('clicked')"></div>
+    <div class="face face_bottom" style="transform: rotateX(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)) translateX(var(--face-size)) translateY(var(--face-size));"
+         onclick="this.classList.toggle('clicked')"></div>
     </div>
-</div>
+    </div>
+  <script src="script.js"></script>
+  
 
-</body>
-</html>
+    </body>
+    </html>
