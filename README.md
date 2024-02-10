@@ -1,4 +1,4 @@
-# Cube-CSS
+# 3D rotating cube
 
 This project demonstrates the implementation of a 3D rotating cube using HTML and CSS. The cube rotates continuously around its axes, creating an eye-catching visual effect.
 
