@@ -1,41 +1,58 @@
 body {
-    margin: 0;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background: #333;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #333;
 }
 
 :root {
-    --face-depth: 40px; /* Depth of cube faces */
-    --face-size: 26px; /* Size of cube faces */
-    --cube-size: 80px; /* Size of the cube */
-    --perspective: 200px; /* Perspective for 3D */
-    --rotation-90: 90deg; /* Rotation angle for 90 degrees */
-    --rotation-180: 180deg; /* Rotation angle for 180 degrees */
+  --face-depth: 80px;
+  --face-size: 52px;
+  --cube-size: 160px;
+  --perspective: 1600px;
+  --rotation-90: 90deg;
+  --rotation-180: 180deg;
 }
 
 .scene {
-    width: var(--cube-size);
-    height: var(--cube-size);
-    perspective: var(--perspective);
+  width: var(--cube-size);
+  height: var(--cube-size);
+  perspective: var(--perspective);
 }
 
 .cube {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    animation: rotateCube 10s infinite linear;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCube 10s infinite linear;
 }
 
 .face {
-    position: absolute;
-    width: var(--face-size);
-    height: var(--face-size);
-    background-color: transparent;
-    border: 1px solid #fff;
+  position: absolute;
+  width: var(--face-size);
+  height: var(--face-size);
+  border: 1px solid #d4d4d4;
+  transition: background-color 0.3s ease;
+  background-color: tr; /* Default background color */
+}
+
+/* Specificity increased for the clicked state to override hover state */
+.face.clicked {
+  background-color: rgba(212, 212, 212, 0.5 ); /* Clicked color */
+  border: 1px solid #FFFFFF;
+}
+
+/* Hover state only applies if not clicked */
+.face:not(.clicked):hover {
+  background-color: rgba(212, 212, 212, 212); /* Hover color */
+}
+
+@keyframes rotateCube {
+  0% { transform: rotateX(0deg) rotateY(0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
 }
 
 /* Define common transformation for each face */
@@ -45,8 +62,3 @@ body {
 .face_left { transform: rotateY(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)); }
 .face_top { transform: rotateX(var(--rotation-90)) translateZ(var(--face-depth)); }
 .face_bottom { transform: rotateX(calc(-1 * var(--rotation-90))) translateZ(var(--face-depth)); }
-
-@keyframes rotateCube {
-    0% { transform: rotateX(0deg) rotateY(0deg); }
-    100% { transform: rotateX(360deg) rotateY(360deg); }
-}
