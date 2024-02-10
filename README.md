@@ -4,7 +4,7 @@ This project demonstrates the implementation of a 3D rotating cube using HTML an
 
 ## Video Demo
 
-![Video Demo](Cube.gif)
+![Video Demo](3DCubeInteractive.gif)
 
 This GIF provides a visual demonstration of the rotating cube functionality.
 
